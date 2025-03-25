@@ -197,3 +197,31 @@ Os **parâmetros nomeados** são uma forma de definir argumentos em funções qu
 - **Parâmetros Posicionais** → São passados na ordem exata em que foram definidos, o que pode gerar ambiguidades.  
 
 Os parâmetros nomeados são uma prática recomendada em Dart para funções que precisam de flexibilidade e clareza na chamada.
+
+• Quais métodos existem para variáveis do tipo Function em dart? 
+R:
+
+Em **Dart**, as variáveis do tipo `Function` possuem métodos e propriedades que permitem manipulá-las de forma dinâmica. Algumas das principais operações disponíveis incluem:  
+
+---
+
+### **1. Métodos Principais para Variáveis do Tipo Function**  
+
+✅ **call()** → Permite chamar a função armazenada na variável, como se fosse um método normal.  
+
+✅ **toString()** → Retorna uma representação em texto da função, geralmente útil para depuração.  
+
+✅ **hashCode** → Retorna um número inteiro único representando o hash da função.  
+
+✅ **runtimeType** → Retorna o tipo de tempo de execução da função.  
+
+---
+
+### **2. Métodos Indiretos**  
+Além dos métodos diretos, funções em Dart podem ser manipuladas de outras formas:  
+
+🔹 **Closures** → Funções podem capturar variáveis do escopo externo.  
+🔹 **Aplicação parcial** → Criar funções com argumentos pré-definidos.  
+🔹 **Reflection (mirrors)** → Embora menos comum, permite inspecionar funções dinamicamente.  
+
+Embora Dart não tenha um conjunto extenso de métodos específicos para `Function`, seu suporte a funções de primeira classe permite grande flexibilidade na manipulação e no uso de funções como variáveis.
