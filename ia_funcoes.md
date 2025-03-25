@@ -168,3 +168,32 @@ Use **valores requeridos** quando um parâmetro **é essencial** para a execuç�
 ### **Resumo:**  
 ✅ Use **valores opcionais** quando quiser mais flexibilidade na chamada da função.  
 ✅ Use **valores requeridos** quando o parâmetro for essencial para o funcionamento correto da função.
+
+• O que são parâmetros nomeados em uma função? 
+R:
+
+### **Parâmetros Nomeados em uma Função Dart**  
+
+Os **parâmetros nomeados** são uma forma de definir argumentos em funções que podem ser passados **de maneira explícita pelo nome** na chamada da função.  
+
+---
+
+### **Características dos Parâmetros Nomeados:**  
+✅ **Mais legibilidade e clareza** → Facilita a leitura do código ao indicar claramente o que cada argumento representa.  
+✅ **Ordem flexível** → Diferente dos parâmetros posicionais, os parâmetros nomeados podem ser passados em qualquer ordem.  
+✅ **Podem ser opcionais ou obrigatórios** → Você pode definir valores padrão ou usar `required` para torná-los obrigatórios.  
+
+---
+
+### **Quando Usar Parâmetros Nomeados?**  
+🔹 **Quando há muitos parâmetros** → Evita confusão ao passar muitos valores em sequência.  
+🔹 **Quando alguns parâmetros podem ser opcionais** → Permite definir valores padrão sem a necessidade de sobrecarga de funções.  
+🔹 **Quando a clareza na chamada da função é importante** → Ajuda a entender melhor o código sem precisar consultar a definição da função.  
+
+---
+
+### **Diferença entre Parâmetros Nomeados e Posicionais:**  
+- **Parâmetros Nomeados** → São passados pelo nome (`nome: valor`), tornando o código mais claro.  
+- **Parâmetros Posicionais** → São passados na ordem exata em que foram definidos, o que pode gerar ambiguidades.  
+
+Os parâmetros nomeados são uma prática recomendada em Dart para funções que precisam de flexibilidade e clareza na chamada.
