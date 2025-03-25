@@ -91,3 +91,40 @@ Defina valores padrão
 Para evitar a necessidade de passar muitos valores sempre, você pode definir valores padrão para os parâmetros menos críticos.
 
 Embora o Dart tecnicamente suporte um número muito alto de parâmetros, boas práticas sugerem que funções não devem receber mais do que 4 a 5 parâmetros diretos, sendo recomendável reorganizá-los se forem muitos.
+
+• É recomendado usar de dynamic nos parâmetros de uma função? 
+R:
+
+Não é recomendado usar dynamic nos parâmetros de uma função em Dart, exceto em casos específicos.
+
+Por que evitar dynamic?
+Perda de segurança de tipo
+
+O uso de dynamic permite qualquer tipo de dado, o que pode causar erros inesperados em tempo de execução.
+
+Dificuldade de manutenção
+
+Funções com parâmetros dynamic dificultam a leitura do código, pois não deixam claro quais tipos de valores são esperados.
+
+Menor eficiência
+
+Dart pode otimizar melhor o código quando os tipos são conhecidos. O uso de dynamic pode impactar o desempenho.
+
+Possível necessidade de verificações extras
+
+Como o tipo do dado não é garantido, muitas vezes é necessário verificar o tipo dentro da função antes de operar sobre ele, o que torna o código mais complexo.
+
+Quando o uso de dynamic pode ser aceitável?
+Quando realmente precisa aceitar qualquer tipo
+
+Se a função deve lidar com dados genéricos, pode ser justificável usar dynamic.
+
+Ao trabalhar com JSONs ou dados dinâmicos
+
+Em alguns casos, como ao manipular respostas de APIs, pode ser necessário lidar com tipos desconhecidos.
+
+Ao implementar funções altamente genéricas
+
+Para criar funções que podem operar sobre múltiplos tipos de dados de forma flexível.
+
+Mesmo nesses casos, usar genéricos (T) é geralmente uma abordagem melhor do que dynamic, pois ainda mantém a segurança de tipo.
