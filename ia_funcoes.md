@@ -34,3 +34,27 @@ Sempre pense em como sua função pode falhar. Se houver possibilidade de erro, 
 Se uma função pode retornar diferentes tipos de dados, tente estruturar melhor a lógica para evitar dynamic, a menos que realmente seja necessário.
 
 Seguir essas práticas ao criar funções em Dart ajuda a manter o código limpo, eficiente e fácil de manter.
+
+• Posso chamar minha função dentro dela mesma? 
+R:
+
+Sim, você pode chamar uma função dentro dela mesma em Dart. Esse conceito é chamado de recursão. No entanto, é importante ter cuidados específicos ao fazer isso para evitar problemas como loops infinitos e estouro de pilha (Stack Overflow).
+
+Cuidados ao chamar uma função dentro dela mesma:
+Defina uma condição de parada
+
+Toda função recursiva precisa de uma condição de saída bem definida para evitar chamadas infinitas.
+
+Garanta que o problema seja reduzido a cada chamada
+
+A cada nova chamada recursiva, os parâmetros devem ser ajustados para que a função se aproxime da condição de saída.
+
+Evite consumo excessivo de memória
+
+Chamadas recursivas aninhadas podem consumir muita memória, pois cada chamada ocupa um espaço na pilha de execução. Se possível, considere usar um loop para evitar a sobrecarga da recursão.
+
+Use a técnica de Tail Recursion se aplicável
+
+Em algumas linguagens, uma otimização de recursão de cauda (tail recursion) reduz o uso de memória. Em Dart, essa otimização não ocorre automaticamente, então deve-se avaliar o impacto da recursão antes de usá-la.
+
+A recursão pode ser útil para resolver problemas como fatorial, sequência de Fibonacci, busca binária e percorrimento de árvores, mas sempre deve ser usada com planejamento para evitar problemas de desempenho e estabilidade no código.
