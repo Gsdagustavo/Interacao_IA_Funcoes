@@ -225,3 +225,35 @@ Além dos métodos diretos, funções em Dart podem ser manipuladas de outras fo
 🔹 **Reflection (mirrors)** → Embora menos comum, permite inspecionar funções dinamicamente.  
 
 Embora Dart não tenha um conjunto extenso de métodos específicos para `Function`, seu suporte a funções de primeira classe permite grande flexibilidade na manipulação e no uso de funções como variáveis.
+
+• Qual a diferença entre chamar minha função chamado olaMundo das seguintes formas “olaMundo” e “olaMundo()”. 
+R:
+
+A diferença entre chamar a função `olaMundo` como **`olaMundo`** e **`olaMundo()`** em **Dart** está relacionada ao modo como as funções são tratadas como objetos de primeira classe.  
+
+---
+
+### **1. `olaMundo` (sem parênteses) → Referência à Função**  
+Quando você escreve apenas `olaMundo`, **sem os parênteses**, está **referenciando** a função, mas **não a executando**. Isso significa que:  
+
+✅ Pode ser atribuída a uma variável do tipo `Function`.  
+✅ Pode ser passada como parâmetro para outras funções.  
+✅ Pode ser armazenada em listas, mapas ou outras estruturas de dados.  
+
+Isso é útil quando você deseja **tratar a função como um objeto**, sem chamá-la diretamente.  
+
+---
+
+### **2. `olaMundo()` (com parênteses) → Execução da Função**  
+Quando você usa `olaMundo()`, está **chamando a função** naquele momento, executando seu código imediatamente.  
+
+✅ A função será executada e retornará um valor (ou `void` se não houver retorno).  
+✅ Se a função tiver efeitos colaterais, eles ocorrerão na hora.  
+
+---
+
+### **Resumo da Diferença**  
+- **`olaMundo`** → Referência à função, sem execução.  
+- **`olaMundo()`** → Executa a função imediatamente.  
+
+Isso é importante em **callbacks, manipulação de funções e programação funcional**, onde a função pode ser passada sem ser executada até que seja necessária.
